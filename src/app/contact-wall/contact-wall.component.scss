@@ -1,0 +1,56 @@
+.contact-wall {
+    background-color: #005bbb;
+    padding: 1em 0em 0em 0em;
+    color: #ffffff;
+}
+
+.contact-wall .banner {
+    background-color: transparent;
+    padding: 0em 5em 0em 5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.contact-wall .banner .profile-picture {
+    padding: 1em 1em 1em 0em;
+    background-size: contain;
+}
+
+.contact-wall .banner .profile-picture img {
+    border:solid 1em #fff;
+}
+
+.contact-wall .banner .nameDesignation {
+    padding: 4em 0em 4em 0em;
+}
+
+.contact-wall .banner .nameDesignation h1 {
+    margin: 0;
+}
+
+.contact-wall .banner .nameDesignation h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+}
+
+.contact-wall .banner .contact {
+    padding: 1em 1em 1em 0em;
+    margin-left: auto;
+}
+
+.contact-wall .banner .contact h2 {
+    font-weight: normal;
+    margin: 0;
+}
+
+ul {
+    list-style-type:none;
+}
+
+ul li {
+    display:inline-block;
+    font-size: 1.5em;
+}

@@ -1,0 +1,26 @@
+.spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 2em;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.publicationTableHeader {
+  padding-left: 1em
+}
+.publicationTableColumn {
+  color: #005bbb;
+  padding-left: 1em
+}
+.publicationTable {
+  font-family: inherit;
+}
+
+.publicationPaginator {
+  font-family: inherit;
+}
