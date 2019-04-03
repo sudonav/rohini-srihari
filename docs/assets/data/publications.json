@@ -1,0 +1,37 @@
+[{
+    "published_date": "2019",
+    "title": "Increasing Lead Time and Granularity of Civil Unrest Prediction through Country Specific, Heterogeneous Data",
+    "author": "Lu Meng, and Rohini K. Srihari",
+    "published_at": "KDD (submitted)"
+},
+{
+    "published_date": "2019",
+    "title": "Prediction and Explanation: Integrating Multiple Data Sources for Social Unrest Event Prediction",
+    "author": "Lu Meng, and Rohini K. Srihari",
+    "published_at": "ACL (submitted)"
+},
+{
+    "published_date": "2017",
+    "title": "Summarizing World Speak : A Preliminary Graph Based Approach",
+    "author": "Nikhil Londhe, and Rohini K. Srihari",
+    "published_at": "RANLP: 452-458"
+},
+{
+    "published_date": "2016",
+    "title": "An Automatic Language Agnostic Approach to Extracting Multiword Expressions on Multilingual Code-Switched Tweets",
+    "author": "Nikhil Londhe, and Rohini K. Srihari",
+    "published_at": "COLING, Japan"
+},
+{
+    "published_date": "2015",
+    "title": "MESS: A Multilingual Error based String Similarity measure for transliterated name variants",
+    "author": "Nikhil Londhe, Gopalakrishnan Vishrawas, Rohini K. Srihari and Aidong Zhang",
+    "published_at": "ACM, India"
+},
+{
+    "published_date": "2014",
+    "title": "Context aware back-transliteration and translation of names and common phrases using web resources",
+    "author": "Rohini K. Srihari, R. Smith, and E. Petersen",
+    "published_at": "United States Patent 8,731,901 (May 20, 2014)"
+}
+]
