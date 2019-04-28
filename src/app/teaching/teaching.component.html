@@ -1,18 +1,41 @@
-<div class="content">
-    <h2>Teaching</h2>
-    <hr>
-    <ul class="teaching">
-        <li>
-          <a href="#">Seminar - AI for Societal Good</a>
-        </li>
-        <li>
-          <a href="#">Advanced Information Retrieval: Web, Text and Social Media Mining</a>
-        </li>
-        <li>
-          <a href="#">Information Retrival</a>
-        </li>
-        <li>
-          <a href="#">Multilingual Text Mining</a>
-        </li>
-    </ul>
+<app-contact-wall></app-contact-wall>
+<div class="container">
+  <div class="content">
+      <h2>Teaching</h2>
+      <hr>
+      <div class="class-list-form ">
+          <button mat-raised-button class="add" [routerLink]="['/teaching-add']">
+            <mat-icon aria-label="Add button" svgIcon="add"></mat-icon>
+          </button>
+        </div>
+      <table mat-table [dataSource]="classDataSource" multiTemplateDataRows class="class-table mat-elevation-z8" >
+        <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+          <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+          <td mat-cell *matCellDef="let class"> {{class[column]}} </td>
+        </ng-container>
+        <ng-container matColumnDef="expandedDetail">
+          <td mat-cell *matCellDef="let class" [attr.colspan]="expandedColumnsToDisplay.length">
+            <div class="class-element-detail" [@detailExpand]="class == expandedClass ? 'expanded' : 'collapsed'">
+              <div class="class-element-info">
+                <div class="info-label">General Information:</div>
+                <div class="class-element-location">{{class.location}} | {{class.time}}</div><br>
+                <div class="info-label">Office Hours:</div>
+                <div class="class-element-office-hours">{{class.office_hours}}</div>
+              </div>
+              <div class="class-element-description">
+                {{class.description}}
+              </div>
+            </div>
+          </td>
+        </ng-container>
+
+        <!-- <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr> -->
+        <tr mat-row *matRowDef="let class; columns: columnsToDisplay;"
+            class="class-element-row"
+            [class.class-expanded-row]="expandedClass === class"
+            (click)="expandedClass = expandedClass === class ? null : class">
+        </tr>
+        <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="class-detail-row"></tr>
+      </table>
+  </div>
 </div>

@@ -24,3 +24,24 @@
 .publicationPaginator {
   font-family: inherit;
 }
+
+.add {
+  color: #ffffff;
+  background-color: #005bbb;
+  margin-bottom: 1em;
+}
+
+.publication-list-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.element-row {
+  cursor: pointer;
+}
+
+.element-row:hover {
+  background: #f5f5f5;
+}

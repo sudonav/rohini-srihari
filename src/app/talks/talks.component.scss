@@ -1,0 +1,47 @@
+.spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 2em;
+    right: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .talksTableHeader {
+    padding-left: 1em
+  }
+  .talksTableColumn {
+    color: #005bbb;
+    padding-left: 1em
+  }
+  .talksTable {
+    font-family: inherit;
+  }
+  
+  .talksPaginator {
+    font-family: inherit;
+  }
+
+  .add {
+    color: #ffffff;
+    background-color: #005bbb;
+    margin-bottom: 1em;
+  }
+
+  .talks-list-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .mat-row {
+    cursor: pointer;
+  }
+  
+  .mat-row:hover {
+    background: #f5f5f5;
+  }

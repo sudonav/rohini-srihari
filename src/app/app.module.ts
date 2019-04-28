@@ -17,8 +17,11 @@ import { PublicationService } from './publication.service'
 import { PublicationDetailComponent } from './publication-detail/publication-detail.component';
 import { PublicationAddComponent } from './publication-add/publication-add.component';
 import { PublicationEditComponent } from './publication-edit/publication-edit.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { TalksComponent } from './talks/talks.component';
+import { TalksService } from './talks.service'
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatInputModule,
   MatPaginatorModule,
@@ -28,9 +31,14 @@ import {
   MatIconModule,
   MatButtonModule,
   MatCardModule,
-  MatFormFieldModule } from "@angular/material";
-
-  import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+  MatFormFieldModule,
+  MatSelectModule, 
+  MatDialogModule} from "@angular/material";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { TalksAddComponent } from './talks-add/talks-add.component';
+import { TalksEditComponent } from './talks-edit/talks-edit.component';
+import { TalksDetailComponent } from './talks-detail/talks-detail.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +52,12 @@ import {
     PublicationComponent,
     PublicationDetailComponent,
     PublicationAddComponent,
-    PublicationEditComponent
+    PublicationEditComponent,
+    TalksComponent,
+    ConfirmationDialogComponent,
+    TalksAddComponent,
+    TalksEditComponent,
+    TalksDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -61,9 +74,15 @@ import {
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSelectModule,
+    MatDialogModule
   ],
-  providers: [PublicationService],
-  bootstrap: [AppComponent]
+  providers: [
+    PublicationService,
+    TalksService
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [ConfirmationDialogComponent]
 })
 export class AppModule { }

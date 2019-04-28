@@ -1,0 +1,50 @@
+<app-contact-wall></app-contact-wall>
+<div class="container">
+  <div class="content">
+    <button mat-raised-button class="back" [routerLink]="['/talks']">
+        <mat-icon aria-label="Back button" svgIcon="back"></mat-icon>
+      </button>
+      <mat-card>
+      <form [formGroup]="talkForm" (ngSubmit)="onFormSubmit(talkForm.value)">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Title" formControlName="title"
+                  [errorStateMatcher]="matcher">
+          <mat-error>
+            <span *ngIf="!talkForm.get('title').valid && talkForm.get('title').touched">Please enter the talk title</span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Event" formControlName="event"
+                    [errorStateMatcher]="matcher">
+            <mat-error>
+              <span *ngIf="!talkForm.get('event').valid && talkForm.get('event').touched">Please enter the event name</span>
+            </mat-error>
+          </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Talk date" formControlName="talk_date"
+                  [errorStateMatcher]="matcher">
+          <mat-error>
+            <span *ngIf="!talkForm.get('talk_date').valid && talkForm.get('talk_date').touched">Please enter talk date</span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Year" formControlName="year"
+                    [errorStateMatcher]="matcher">
+            <mat-error>
+              <span *ngIf="!talkForm.get('year').valid && talkForm.get('year').touched">Please enter year</span>
+            </mat-error>
+          </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Location" formControlName="location"
+                  [errorStateMatcher]="matcher">
+          <mat-error>
+            <span *ngIf="!talkForm.get('location').valid && talkForm.get('location').touched">Please enter the location</span>
+          </mat-error>
+        </mat-form-field>
+        <div>
+          <button type="submit" [disabled]="!talkForm.valid" mat-raised-button class="save"><mat-icon aria-label="Save button" svgIcon="save">Save</mat-icon></button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>

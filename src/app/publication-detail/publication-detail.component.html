@@ -1,3 +1,22 @@
-<p>
-  publication-detail works!
-</p>
+<app-contact-wall></app-contact-wall>
+<div class="container">
+  <div class="content">
+    <button mat-raised-button class="back" [routerLink]="['/publication']">
+      <mat-icon aria-label="Back button" svgIcon="back"></mat-icon>
+    </button>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="publication-title">{{publication.title}}</mat-card-title>
+        <mat-card-subtitle>{{publication.author}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-raised-button class="edit" [routerLink]="['/publication-edit/', publication.id]">
+          <mat-icon aria-label="Edit button" svgIcon="edit"></mat-icon>
+        </button>
+        <button mat-raised-button class="delete" (click)="openConfirmationDialog()">
+          <mat-icon aria-label="Delete button" svgIcon="delete"></mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+</div>
+</div>

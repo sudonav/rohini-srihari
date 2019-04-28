@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { PublicationService } from '../publication.service'
 import { Publication } from '../model/publication';
-import { MatPaginator, MatTableDataSource } from '@angular/material';
-
+import { MatPaginator, MatTableDataSource, MatTable, MatIconRegistry } from '@angular/material';
+import { DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-publication',
@@ -15,9 +15,16 @@ export class PublicationComponent implements OnInit {
   @Input() publications: Publication[];
   isLoadingResults = true;
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  publicationDataSource;
+  @ViewChild(MatTable) table: MatTable<any>;
+  publicationDataSource: any;
+  selected: number = null;
+  publicationYears: number[];
 
-  constructor(private publicationService: PublicationService) { }
+  constructor(private publicationService: PublicationService, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+      'add',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/img/baseline-add_box-24px.svg')); 
+   }
 
   ngOnInit() {
     this.publicationService.getPublications()
@@ -25,8 +32,21 @@ export class PublicationComponent implements OnInit {
                 {
                   this.publications = res;
                   this.isLoadingResults = false;
+                  this.publicationYears = Array.from(new Set(res.map(item => item.year)));
                   this.publicationDataSource = new MatTableDataSource<Publication>(this.publications);
                   this.publicationDataSource.paginator = this.paginator;
                 });
+  }
+
+  filterPublications(year: number) {
+    if(year != undefined) {
+      this.selected = year;
+      this.publicationDataSource = new MatTableDataSource<Publication>(this.publications.filter((publication) => publication.year == this.selected));  
+    } else {
+      this.selected = null;
+      this.publicationDataSource = new MatTableDataSource<Publication>(this.publications);
+    }
+    this.publicationDataSource.paginator = this.paginator;
+    this.table.renderRows();
   }
 }
