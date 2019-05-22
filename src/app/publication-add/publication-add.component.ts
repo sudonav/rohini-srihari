@@ -42,16 +42,17 @@ export class PublicationAddComponent implements OnInit {
   }
 
   onFormSubmit(form:NgForm) {
-    this.isLoadingResults = true;
-    this.http.addPublication(form)
-      .subscribe(res => {
-          let id = res['id'];
-          this.isLoadingResults = false;
-          this.router.navigate(['/publication-detail', id]);
-        }, (err) => {
-          console.log(err);
-          this.isLoadingResults = false;
-        }
-      );
+    // this.isLoadingResults = true;
+    // this.http.addPublication(form)
+    //   .subscribe(res => {
+    //       let id = res['id'];
+    //       this.isLoadingResults = false;
+    //       this.router.navigate(['/publication-detail', id]);
+    //     }, (err) => {
+    //       console.log(err);
+    //       this.isLoadingResults = false;
+    //     }
+    //   );
+    this.isLoadingResults = false;
   }
 }

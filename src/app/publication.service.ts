@@ -17,15 +17,15 @@ export class PublicationService {
     return this.http.get('assets/data/publications.json', { responseType: 'json' }).pipe(map(res => res['publication']));
   }
 
-  deletePublicationById(_id: number): Observable<any>{
-    return this.http.delete(this.baseUrl + '/publication/' + _id);
-  }
+  // deletePublicationById(_id: number): Observable<any>{
+  //   return this.http.delete(this.baseUrl + '/publication/' + _id);
+  // }
 
-  updatePublicationById(_id: number, publication: any): Observable<any>{
-    return this.http.put(this.baseUrl + '/publication/' + _id, publication);
-  }
+  // updatePublicationById(_id: number, publication: any): Observable<any>{
+  //   return this.http.put(this.baseUrl + '/publication/' + _id, publication);
+  // }
   
-  addPublication(publication: any): Observable<any>{
-    return this.http.post(this.baseUrl + '/publication/', publication);
-  }
+  // addPublication(publication: any): Observable<any>{
+  //   return this.http.post(this.baseUrl + '/publication/', publication);
+  // }
 }

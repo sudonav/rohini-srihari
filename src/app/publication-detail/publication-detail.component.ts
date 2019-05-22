@@ -47,15 +47,16 @@ export class PublicationDetailComponent implements OnInit {
   }
 
   deletePublicationById(id: number) {
-    this.isLoadingResults = true;
-    this.http.deletePublicationById(id)
-    .subscribe((res: Publication) => {
-      this.isLoadingResults = false;
-      this.router.navigate(['/publication']);
-    }, (err) => {
-      console.log(err);
-      this.isLoadingResults = false;
-    });
+    // this.isLoadingResults = true;
+    // this.http.deletePublicationById(id)
+    // .subscribe((res: Publication) => {
+    //   this.isLoadingResults = false;
+    //   this.router.navigate(['/publication']);
+    // }, (err) => {
+    //   console.log(err);
+    //   this.isLoadingResults = false;
+    // });
+    this.isLoadingResults = false;
   }
 
   openConfirmationDialog() {
