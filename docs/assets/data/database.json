@@ -1,0 +1,83 @@
+{
+  "publication": [
+    {
+      "title": "Prediction and Explanation: Integrating Multiple Data Sources for Social Unrest Event Prediction",
+      "author": "Lu Meng, and Rohini K. Srihari",
+      "published_date": "2019",
+      "year": 2019,
+      "published_at": "ACL (submitted)",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "year": 2017,
+      "published_date": "2017",
+      "title": "Summarizing World Speak : A Preliminary Graph Based Approach",
+      "author": "Nikhil Londhe, and Rohini K. Srihari",
+      "published_at": "RANLP: 452-458"
+    },
+    {
+      "id": 4,
+      "year": 2016,
+      "published_date": "2016",
+      "title": "An Automatic Language Agnostic Approach to Extracting Multiword Expressions on Multilingual Code-Switched Tweets",
+      "author": "Nikhil Londhe, and Rohini K. Srihari",
+      "published_at": "COLING, Japan"
+    },
+    {
+      "id": 5,
+      "year": 2015,
+      "published_date": "2015",
+      "title": "MESS: A Multilingual Error based String Similarity measure for transliterated name variants",
+      "author": "Nikhil Londhe, Gopalakrishnan Vishrawas, Rohini K. Srihari and Aidong Zhang",
+      "published_at": "ACM, India"
+    },
+    {
+      "id": 6,
+      "year": 2014,
+      "published_date": "2014",
+      "title": "Context aware back-transliteration and translation of names and common phrases using web resources",
+      "author": "Rohini K. Srihari, R. Smith, and E. Petersen",
+      "published_at": "United States Patent 8,731,901 (May 20, 2014)"
+    }
+  ],
+  "talk": [
+    {
+      "title": "Infer Demographics from Social Data",
+      "event": "Sentiment Analysis Symposium",
+      "location": "New York, NY",
+      "year": "2016",
+      "talk_date": "July 2015",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "year": "2012",
+      "talk_date": "August 2012",
+      "title": "Multilingual Text Mining: Lost in Translation, Found in Native Language Mining",
+      "event": "University Talks",
+      "location": "University of Arizona, Tucson, AZ"
+    }
+  ],
+  "class": [
+    {
+      "title": "Advanced Information Retrieval",
+      "location": "NSC 209",
+      "time": "Monday, Wednesday - 5.00 PM to 6.20 PM",
+      "office_hours": "Tuesdays - 10:00 AM to 12:00 PM",
+      "semester": "Spring 2019, Spring 2020",
+      "description": "This course will explore various aspects of text, web and social media mining; the emphasis will be on a data science approach combining various techniques to develop solutions to problems involving social media data. The course begins with some fundamentals on data mining followed by recommender systems (algorithms powering Amazon, Facebook and Twitter). This is followed by a discussion of several topics in content mining, including entity tagging, topic models, and information extraction. The last segment focuses on graph mining techniques suitable for analyzing social networks. Lectures will include case studies of successfully implemented solution. ",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "title": "Information Retrieval",
+      "office_hours": "Tuesdays - 10:00 AM to 12:00 PM",
+      "location": "NSC 203",
+      "time": "Wednesday, Friday - 3.30 PM to 6.20 PM",
+      "is_active": false,
+      "semester": "Fall 2019",
+      "description": "This course will explore various aspects of text, web and social media mining; the emphasis will be on a data science approach combining various techniques to develop solutions to problems involving social media data. The course begins with some fundamentals on data mining followed by recommender systems (algorithms powering Amazon, Facebook and Twitter). This is followed by a discussion of several topics in content mining, including entity tagging, topic models, and information extraction. The last segment focuses on graph mining techniques suitable for analyzing social networks. Lectures will include case studies of successfully implemented solutions. "
+    }
+  ]
+}
