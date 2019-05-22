@@ -4,6 +4,7 @@ import { PublicationService } from '../publication.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DomSanitizer} from '@angular/platform-browser';
 import { MatIconRegistry, MatDialog } from '@angular/material';
+import {ErrorStateMatcher} from '@angular/material/core';
 
 @Component({
   selector: 'app-publication-add',
@@ -12,6 +13,7 @@ import { MatIconRegistry, MatDialog } from '@angular/material';
 })
 export class PublicationAddComponent implements OnInit {
 
+  matcher = new ErrorStateMatcher();
   publicationForm: FormGroup;
   id: number = null;
   title:string = "";

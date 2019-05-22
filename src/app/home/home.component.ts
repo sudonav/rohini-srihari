@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../common.service'
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  bio : any;
+  constructor(private commonService: CommonService) { }
 
   ngOnInit() {
+    this.commonService.getBio().subscribe(data => 
+      {
+        this.bio = data;
+        console.log(this.bio);
+      })
   }
 
 }

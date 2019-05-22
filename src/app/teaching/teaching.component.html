@@ -25,6 +25,11 @@
               <div class="class-element-description">
                 {{class.description}}
               </div>
+              <div>
+                  <button mat-raised-button class="view" [routerLink]="['/teaching-detail',class.id]">
+                    <mat-icon aria-label="View button" svgIcon="view"></mat-icon>
+                  </button>
+                </div>
             </div>
           </td>
         </ng-container>

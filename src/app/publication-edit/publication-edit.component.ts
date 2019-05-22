@@ -5,6 +5,7 @@ import { Publication } from '../model/publication';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DomSanitizer} from '@angular/platform-browser';
 import { MatIconRegistry, MatDialog } from '@angular/material';
+import {ErrorStateMatcher} from '@angular/material/core';
 
 @Component({
   selector: 'app-publication-edit',
@@ -13,6 +14,7 @@ import { MatIconRegistry, MatDialog } from '@angular/material';
 })
 export class PublicationEditComponent implements OnInit {
 
+  matcher = new ErrorStateMatcher();
   publicationForm: FormGroup;
   id: number = null;
   title:string = "";

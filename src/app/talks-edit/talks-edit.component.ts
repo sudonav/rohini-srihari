@@ -5,6 +5,7 @@ import { Talks } from '../model/talks';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DomSanitizer} from '@angular/platform-browser';
 import { MatIconRegistry, MatDialog } from '@angular/material';
+import {ErrorStateMatcher} from '@angular/material/core';
 
 @Component({
   selector: 'app-talks-edit',
@@ -13,6 +14,7 @@ import { MatIconRegistry, MatDialog } from '@angular/material';
 })
 export class TalksEditComponent implements OnInit {
 
+  matcher = new ErrorStateMatcher();
   talkForm: FormGroup;
   id: number = null;
   title:string = "";

@@ -31,6 +31,9 @@ export class TeachingComponent implements OnInit {
     iconRegistry.addSvgIcon(
       'add',
       sanitizer.bypassSecurityTrustResourceUrl('assets/img/baseline-add_box-24px.svg')); 
+    iconRegistry.addSvgIcon(
+      'view',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/img/baseline-edit-24px.svg')); 
    }
 
   ngOnInit() {
@@ -42,5 +45,4 @@ export class TeachingComponent implements OnInit {
                   this.classDataSource = new MatTableDataSource<Class>(this.classes);
                 });
   }
-
 }

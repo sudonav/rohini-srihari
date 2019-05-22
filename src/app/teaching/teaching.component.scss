@@ -64,9 +64,14 @@ tr.class-element-row:not(.class-expanded-row):hover {
 }
   
 tr.class-element-row:not(.class-expanded-row):active {
-background: #efefef;
+    background: #efefef;
 }
 
 .info-label {
     font-weight: bold;
+}
+
+.view {
+    color: #ffffff;
+    background-color: #005bbb;
 }

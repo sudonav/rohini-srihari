@@ -23,7 +23,9 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/assets"
+              "src/assets",
+              { "glob": "bio.txt", "input": "./", "output": "./src/assets/data/" },
+              { "glob": "research.txt", "input": "./", "output": "./src/assets/data/" }
             ],
             "styles": [
               "src/styles.scss",

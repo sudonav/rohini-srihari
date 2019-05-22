@@ -1,0 +1,55 @@
+<app-contact-wall></app-contact-wall>
+<div class="container">
+  <div class="content">
+    <button mat-raised-button class="back" [routerLink]="['/teaching']">
+        <mat-icon aria-label="Back button" svgIcon="back"></mat-icon>
+      </button>
+      <mat-card>
+      <form [formGroup]="teachingForm" (ngSubmit)="onFormSubmit(teachingForm.value)">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Title" formControlName="title"
+                  [errorStateMatcher]="matcher">
+          <mat-error>
+            <span *ngIf="!teachingForm.get('title').valid && teachingForm.get('title').touched">Please enter the publication title</span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Office Hours" formControlName="office_hours"
+                    [errorStateMatcher]="matcher">
+            <mat-error>
+              <span *ngIf="!teachingForm.get('office_hours').valid && teachingForm.get('office_hours').touched">Please enter the office_hours</span>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Time" formControlName="time"
+                    [errorStateMatcher]="matcher">
+            <mat-error>
+              <span *ngIf="!teachingForm.get('time').valid && teachingForm.get('time').touched">Please enter the time</span>
+            </mat-error>
+          </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Location" formControlName="location"
+                  [errorStateMatcher]="matcher">
+          <mat-error>
+            <span *ngIf="!teachingForm.get('location').valid && teachingForm.get('location').touched">Please enter the location</span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Semester" formControlName="semester" [errorStateMatcher]="matcher">
+          <mat-error>
+            <span *ngIf="!teachingForm.get('semester').valid && teachingForm.get('semester').touched">Please enter the semester</span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Description" formControlName="description" [errorStateMatcher]="matcher">
+          <mat-error>
+            <span *ngIf="!teachingForm.get('description').valid && teachingForm.get('description').touched">Please enter the description</span>
+          </mat-error>
+        </mat-form-field>
+        <div>
+          <button type="submit" [disabled]="!teachingForm.valid" mat-raised-button class="save"><mat-icon aria-label="Save button" svgIcon="save">Save</mat-icon></button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>

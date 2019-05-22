@@ -1,10 +1,9 @@
 export interface Class {
     id: number;
-    title: number;
+    title: string;
     location: string;
     time: string;
     office_hours: string;
-    is_active: boolean;
-    semester: string[];
+    semester: string;
     description: string;
 }

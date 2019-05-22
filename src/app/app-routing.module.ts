@@ -11,19 +11,26 @@ import { PublicationDetailComponent } from './publication-detail/publication-det
 import { TalksAddComponent } from './talks-add/talks-add.component';
 import { TalksEditComponent } from './talks-edit/talks-edit.component';
 import { TalksDetailComponent } from './talks-detail/talks-detail.component';
+import { SeminarComponent } from './seminar/seminar.component';
+import { TeachingAddComponent } from './teaching-add/teaching-add.component';
+import { TeachingEditComponent } from './teaching-edit/teaching-edit.component';
+import { TeachingDetailComponent } from './teaching-detail/teaching-detail.component';
+import { LoginComponent } from './auth/login/login.component';
 
 const routes: Routes = [ {
-  path: '', redirectTo: '/rohini', pathMatch: 'full'
+  path: '', redirectTo: 'rohini', pathMatch: 'full'
   },
   {
     path: 'rohini',
-    component: HomeComponent
-  },{
+    component: HomeComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
     path: 'research',
     component: ResearchComponent
-  },  {
-    path: 'teaching',
-    component:TeachingComponent
   },{
     path: 'publication',
     component:PublicationComponent
@@ -48,6 +55,23 @@ const routes: Routes = [ {
   },{
     path: 'talks-detail/:id',
     component:TalksDetailComponent
+  },{
+    path: 'seminar',
+    component:SeminarComponent
+  },{
+    path: 'teaching',
+    component:TeachingComponent
+  },{
+    path: 'teaching-add',
+    component:TeachingAddComponent
+  },{
+    path: 'teaching-edit/:id',
+    component:TeachingEditComponent
+  },{
+    path: 'teaching-detail/:id',
+    component:TeachingDetailComponent
+  },{
+    path: '**', redirectTo: '' 
   }
 ];
 

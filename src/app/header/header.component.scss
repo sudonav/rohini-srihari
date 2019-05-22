@@ -14,9 +14,14 @@
     .header .searchbar {
         margin-left: auto;
     }
+
     .header .searchbar .account {
-        border-right: 1px solid #005bbb;
-        padding: 0.5em;
+        padding-top: 0.75em;
+    }
+
+    .header .searchbar .account:hover {
+        color: black;
+        cursor: pointer;
     }
 
     .header .searchbar input[type="search"]{
