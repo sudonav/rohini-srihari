@@ -1,9 +1,0 @@
-{
-    "publication": [{
-            "id": 1,
-            "published_date": "01/01/2019",
-            "title": "Increasing Lead Time and Granularity of Civil Unrest Prediction through Country Specific, Heterogeneous Data",
-            "author": "Lu Meng and Rohini K. Srihari",
-            "published_at": "KDD 2019"
-        }]
-}
