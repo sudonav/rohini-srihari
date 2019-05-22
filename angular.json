@@ -25,7 +25,11 @@
             "assets": [
               "src/assets",
               { "glob": "bio.txt", "input": "./", "output": "./src/assets/data/" },
-              { "glob": "research.txt", "input": "./", "output": "./src/assets/data/" }
+              { "glob": "research.txt", "input": "./", "output": "./src/assets/data/" },
+              { "glob": "database.json", "input": "./", "output": "./src/assets/data/" },
+              { "glob": "publications.json", "input": "./", "output": "./src/assets/data/" },
+              { "glob": "teachings.json", "input": "./", "output": "./src/assets/data/" },
+              { "glob": "talks.json", "input": "./", "output": "./src/assets/data/" }
             ],
             "styles": [
               "src/styles.scss",

@@ -20,7 +20,6 @@ export class PublicationDetailComponent implements OnInit {
 
   publication: Publication = { id: null, year: null, published_date: '', published_at: '', title: '', author: ''};
   isLoadingResults = true;
-
   constructor(private route: ActivatedRoute, private http: PublicationService, private router: Router, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, public dialog: MatDialog) {
     iconRegistry.addSvgIcon(
       'back',
@@ -38,11 +37,11 @@ export class PublicationDetailComponent implements OnInit {
   }
 
   getPublicationById(id: number) {
-    console.log('Get By Id invoked');
-    this.http.getPublicationById(id)
-    .subscribe((res: Publication) => 
+    console.log('Get By Id invoked ' + id);
+    this.http.getPublications()
+    .subscribe((res: Publication[]) => 
                 {
-                  this.publication = res;
+                  this.publication = res.find(item => item.id == id);
                   this.isLoadingResults = false;
                 });
   }

@@ -44,7 +44,8 @@ export class PublicationEditComponent implements OnInit {
   }
 
   fetchPublication(id: number) {
-    this.http.getPublicationById(id).subscribe((data: Publication)=> {
+    this.http.getPublications().subscribe((publications: Publication[])=> {
+      var data: Publication = publications.find(item => item.id == id);
       this.id = data.id;
       this.publicationForm.setValue({
         title: data.title,

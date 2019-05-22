@@ -7,8 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href https://sudonav.github.io/rohini-srihari/ && angular-cli-ghpages --branch gh-pages"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
