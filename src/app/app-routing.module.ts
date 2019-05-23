@@ -19,6 +19,10 @@ import { LoginComponent } from './auth/login/login.component';
 
 const routes: Routes = [ {
   path: '', redirectTo: 'rohini', pathMatch: 'full'
+  },{
+    path: '**', redirectTo: 'rohini'
+  },{
+    path: 'rohini-srihari', redirectTo: 'rohini'
   },
   {
     path: 'rohini',
