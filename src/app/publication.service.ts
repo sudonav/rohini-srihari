@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class PublicationService {
 
-  baseUrl:string = "http://localhost:3004";
+  // baseUrl:string = "http://localhost:3004";
 
   constructor(private http: HttpClient) { }
 

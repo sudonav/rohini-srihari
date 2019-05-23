@@ -8,12 +8,12 @@ import { map } from 'rxjs/operators';
 })
 export class TalksService {
 
-  baseUrl:string = "http://localhost:3000";
+  // baseUrl:string = "http://localhost:3000";
 
   constructor(private http: HttpClient) { }
 
   getTalks(): Observable<any>{
-    return this.http.get('assets/data/talks.json', { responseType: 'json' }).pipe(map(res => res['talks']));
+    return this.http.get('assets/data/talks.json', { responseType: 'json' }).pipe(map(res => res['talk']));
   }
 
   // getTalkById(_id: number): Observable<any>{
