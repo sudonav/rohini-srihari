@@ -34,24 +34,25 @@ export class TalksDetailComponent implements OnInit {
 
   getTalkById(id: number) {
     console.log('Get By Id invoked');
-    this.http.getTalkById(id)
-    .subscribe((res: Talks) => 
+    this.http.getTalks()
+    .subscribe((res: Talks[]) => 
                 {
-                  this.talk = res;
+                  this.talk = res.find(item => item.id == id);
                   this.isLoadingResults = false;
                 });
   }
 
   deleteTalkById(id: number) {
-    this.isLoadingResults = true;
-    this.http.deleteTalkById(id)
-    .subscribe((res: Talks) => {
-      this.isLoadingResults = false;
-      this.router.navigate(['/talks']);
-    }, (err) => {
-      console.log(err);
-      this.isLoadingResults = false;
-    });
+    // this.isLoadingResults = true;
+    // this.http.deleteTalkById(id)
+    // .subscribe((res: Talks) => {
+    //   this.isLoadingResults = false;
+    //   this.router.navigate(['/talks']);
+    // }, (err) => {
+    //   console.log(err);
+    //   this.isLoadingResults = false;
+    // });
+    this.isLoadingResults = false;
   }
 
   openConfirmationDialog() {

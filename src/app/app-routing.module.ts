@@ -71,7 +71,7 @@ const routes: Routes = [ {
     path: 'teaching-detail/:id',
     component:TeachingDetailComponent
   },{
-    path: '**', redirectTo: '' 
+    path: '**', redirectTo: 'rohini' 
   }
 ];
 

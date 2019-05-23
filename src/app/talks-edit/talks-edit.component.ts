@@ -44,7 +44,8 @@ export class TalksEditComponent implements OnInit {
   }
 
   fetchTalks(id: number) {
-    this.http.getTalkById(id).subscribe((data: Talks)=> {
+    this.http.getTalks().subscribe((talks: Talks[])=> {
+      var data = talks.find(item => item.id == id)
       this.id = data.id;
       this.talkForm.setValue({
         title: data.title,
@@ -57,17 +58,18 @@ export class TalksEditComponent implements OnInit {
   }
 
   onFormSubmit(form:NgForm) {
-    this.isLoadingResults = true;
-    this.http.updateTalkById(this.id, form)
-      .subscribe(res => {
-          let id = res['id'];
-          this.isLoadingResults = false;
-          this.router.navigate(['/talks-detail', id]);
-        }, (err) => {
-          console.log(err);
-          this.isLoadingResults = false;
-        }
-      );
+    // this.isLoadingResults = true;
+    // this.http.updateTalkById(this.id, form)
+    //   .subscribe(res => {
+    //       let id = res['id'];
+    //       this.isLoadingResults = false;
+    //       this.router.navigate(['/talks-detail', id]);
+    //     }, (err) => {
+    //       console.log(err);
+    //       this.isLoadingResults = false;
+    //     }
+    //   );
+    this.isLoadingResults = false;
   }
 
   talkDetails() {

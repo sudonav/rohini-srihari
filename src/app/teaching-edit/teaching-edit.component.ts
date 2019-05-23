@@ -50,7 +50,8 @@ export class TeachingEditComponent implements OnInit {
   }
 
   fetchClass(id: number) {
-    this.http.getClassById(id).subscribe((data: Class)=> {
+    this.http.getClasses().subscribe((classes: Class[])=> {
+      var data = classes.find(item => item.id == id)
       this.id = data.id;
       this.teachingForm.setValue({
         title: data.title,
@@ -64,17 +65,18 @@ export class TeachingEditComponent implements OnInit {
   }
 
   onFormSubmit(form:NgForm) {
-    this.isLoadingResults = true;
-    this.http.updateClassById(this.id, form)
-      .subscribe(res => {
-          let id = res['id'];
-          this.isLoadingResults = false;
-          this.router.navigate(['/teaching-detail', id]);
-        }, (err) => {
-          console.log(err);
-          this.isLoadingResults = false;
-        }
-      );
+    // this.isLoadingResults = true;
+    // this.http.updateClassById(this.id, form)
+    //   .subscribe(res => {
+    //       let id = res['id'];
+    //       this.isLoadingResults = false;
+    //       this.router.navigate(['/teaching-detail', id]);
+    //     }, (err) => {
+    //       console.log(err);
+    //       this.isLoadingResults = false;
+    //     }
+    //   );
+    this.isLoadingResults = false;
   }
 
   teachingDetails() {

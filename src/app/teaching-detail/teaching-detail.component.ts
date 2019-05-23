@@ -38,24 +38,25 @@ export class TeachingDetailComponent implements OnInit {
 
   getTeachingById(id: number) {
     console.log('Get By Id invoked');
-    this.http.getClassById(id)
-    .subscribe((res: Class) => 
+    this.http.getClasses()
+    .subscribe((res: Class[]) => 
     {
-      this.teaching = res;
+      this.teaching = res.find(item => item.id == id);
       this.isLoadingResults = false;
     });
   }
 
   deleteTeachingById(id: number) {
-    this.isLoadingResults = true;
-    this.http.deleteClassById(id)
-    .subscribe((res: Class) => {
-      this.isLoadingResults = false;
-      this.router.navigate(['/teaching']);
-    }, (err) => {
-      console.log(err);
-      this.isLoadingResults = false;
-    });
+    // this.isLoadingResults = true;
+    // this.http.deleteClassById(id)
+    // .subscribe((res: Class) => {
+    //   this.isLoadingResults = false;
+    //   this.router.navigate(['/teaching']);
+    // }, (err) => {
+    //   console.log(err);
+    //   this.isLoadingResults = false;
+    // });
+    this.isLoadingResults = false;
   }
 
   openConfirmationDialog() {

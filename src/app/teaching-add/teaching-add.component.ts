@@ -44,16 +44,17 @@ export class TeachingAddComponent implements OnInit {
   }
 
   onFormSubmit(form:NgForm) {
-    this.isLoadingResults = true;
-    this.http.addClass(form)
-      .subscribe(res => {
-          let id = res['id'];
-          this.isLoadingResults = false;
-          this.router.navigate(['/teaching']);
-        }, (err) => {
-          console.log(err);
-          this.isLoadingResults = false;
-        }
-      );
+    // this.isLoadingResults = true;
+    // this.http.addClass(form)
+    //   .subscribe(res => {
+    //       let id = res['id'];
+    //       this.isLoadingResults = false;
+    //       this.router.navigate(['/teaching']);
+    //     }, (err) => {
+    //       console.log(err);
+    //       this.isLoadingResults = false;
+    //     }
+    //   );
+    this.isLoadingResults = false;
   }
 }
