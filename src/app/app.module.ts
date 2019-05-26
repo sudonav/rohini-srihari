@@ -21,7 +21,6 @@ import { TeachingDetailComponent } from './teaching-detail/teaching-detail.compo
 
 import { PublicationComponent } from './publication/publication.component';
 import { PublicationService } from './publication.service'
-import { PublicationDetailComponent } from './publication-detail/publication-detail.component';
 import { PublicationAddComponent } from './publication-add/publication-add.component';
 import { PublicationEditComponent } from './publication-edit/publication-edit.component';
 
@@ -29,7 +28,6 @@ import { TalksComponent } from './talks/talks.component';
 import { TalksService } from './talks.service'
 import { TalksAddComponent } from './talks-add/talks-add.component';
 import { TalksEditComponent } from './talks-edit/talks-edit.component';
-import { TalksDetailComponent } from './talks-detail/talks-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {
@@ -44,7 +42,8 @@ import {
   MatFormFieldModule,
   MatSelectModule, 
   MatDialogModule,
-  MatRadioModule} from "@angular/material";
+  MatRadioModule,
+  MatTabsModule} from "@angular/material";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -60,14 +59,12 @@ import { TokenInterceptor } from './interceptor/token.interceptor';
     ResearchComponent,
     TeachingComponent,
     PublicationComponent,
-    PublicationDetailComponent,
     PublicationAddComponent,
     PublicationEditComponent,
     TalksComponent,
     ConfirmationDialogComponent,
     TalksAddComponent,
     TalksEditComponent,
-    TalksDetailComponent,
     SeminarComponent,
     TeachingAddComponent,
     TeachingEditComponent,
@@ -93,7 +90,8 @@ import { TokenInterceptor } from './interceptor/token.interceptor';
     MatSelectModule,
     MatDialogModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTabsModule,
   ],
   providers: [
     PublicationService,

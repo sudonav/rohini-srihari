@@ -15,9 +15,9 @@
             <mat-option *ngFor="let year of publicationYears" [value]="year">{{year}}</mat-option>
           </mat-select>
         </mat-form-field>
-        <button mat-raised-button class="add" [routerLink]="['/publication-add']">
+        <!-- <button mat-raised-button class="add" [routerLink]="['/publication-add']">
             <mat-icon aria-label="Add button" svgIcon="add"></mat-icon>
-        </button>
+        </button> -->
       </div>
       <table mat-table [dataSource]=publicationDataSource class="publicationTable">
         <ng-container matColumnDef="title">
@@ -38,7 +38,7 @@
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="element-row" [routerLink]="['/publication-detail/', row.id]" ></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="element-row" (click)="navigateTo(row)"></tr>
       </table>
       <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons class="publicationPaginator"></mat-paginator>
   </div>

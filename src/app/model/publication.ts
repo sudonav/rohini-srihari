@@ -5,4 +5,5 @@ export interface Publication {
     title: string;
     author: string;
     published_at: string;
+    url: string;
 } 

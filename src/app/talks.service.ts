@@ -16,6 +16,14 @@ export class TalksService {
     return this.http.get('assets/data/talks.json', { responseType: 'json' }).pipe(map(res => res['talk']));
   }
 
+  getInterviews(): Observable<any>{
+    return this.http.get('assets/data/interviews.json', { responseType: 'json' }).pipe(map(res => res['interview']));
+  }
+
+  getMemberships(): Observable<any>{
+    return this.http.get('assets/data/memberships.json', { responseType: 'json' }).pipe(map(res => res['membership']));
+  }
+
   // getTalkById(_id: number): Observable<any>{
   //   return this.http.get(this.baseUrl + '/talk/' + _id);
   // }

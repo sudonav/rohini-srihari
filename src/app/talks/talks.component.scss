@@ -45,3 +45,16 @@
   .mat-row:hover {
     background: #f5f5f5;
   }
+
+  .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar  {
+    font-family: inherit;
+  }
+
+  .mat-tab-labels, .mat-tab-label, .mat-tab-link {
+    font-family: inherit;
+  }
+
+  .mat-tab-label.mat-tab-label-active {
+    font-family: inherit;
+    font-size: 1em;
+  }

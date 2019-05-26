@@ -29,7 +29,9 @@
               { "glob": "database.json", "input": "./", "output": "./src/assets/data/" },
               { "glob": "publications.json", "input": "./", "output": "./src/assets/data/" },
               { "glob": "teachings.json", "input": "./", "output": "./src/assets/data/" },
-              { "glob": "talks.json", "input": "./", "output": "./src/assets/data/" }
+              { "glob": "talks.json", "input": "./", "output": "./src/assets/data/" },
+              { "glob": "interviews.json", "input": "./", "output": "./src/assets/data/" },
+              { "glob": "memberships.json", "input": "./", "output": "./src/assets/data/" }
             ],
             "styles": [
               "src/styles.scss",

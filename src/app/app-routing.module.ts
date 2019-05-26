@@ -7,25 +7,17 @@ import { PublicationComponent } from './publication/publication.component';
 import { PublicationAddComponent } from './publication-add/publication-add.component';
 import { PublicationEditComponent } from './publication-edit/publication-edit.component';
 import { TalksComponent } from './talks/talks.component'
-import { PublicationDetailComponent } from './publication-detail/publication-detail.component';
 import { TalksAddComponent } from './talks-add/talks-add.component';
 import { TalksEditComponent } from './talks-edit/talks-edit.component';
-import { TalksDetailComponent } from './talks-detail/talks-detail.component';
 import { SeminarComponent } from './seminar/seminar.component';
 import { TeachingAddComponent } from './teaching-add/teaching-add.component';
 import { TeachingEditComponent } from './teaching-edit/teaching-edit.component';
 import { TeachingDetailComponent } from './teaching-detail/teaching-detail.component';
 import { LoginComponent } from './auth/login/login.component';
 
-const routes: Routes = [ {
-  path: '', redirectTo: 'rohini', pathMatch: 'full'
-  },{
-    path: '**', redirectTo: 'rohini'
-  },{
-    path: 'rohini-srihari', redirectTo: 'rohini'
-  },
+const routes: Routes = [ 
   {
-    path: 'rohini',
+    path: '',
     component: HomeComponent,
   },
   {
@@ -45,9 +37,6 @@ const routes: Routes = [ {
     path: 'publication-edit/:id',
     component:PublicationEditComponent
   },{
-    path: 'publication-detail/:id',
-    component:PublicationDetailComponent
-  },{
     path: 'talks',
     component:TalksComponent
   },{
@@ -56,9 +45,6 @@ const routes: Routes = [ {
   },{
     path: 'talks-edit/:id',
     component:TalksEditComponent
-  },{
-    path: 'talks-detail/:id',
-    component:TalksDetailComponent
   },{
     path: 'seminar',
     component:SeminarComponent
@@ -74,7 +60,8 @@ const routes: Routes = [ {
   },{
     path: 'teaching-detail/:id',
     component:TeachingDetailComponent
-  }
+  },
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({

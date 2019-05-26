@@ -49,4 +49,11 @@ export class PublicationComponent implements OnInit {
     this.publicationDataSource.paginator = this.paginator;
     this.table.renderRows();
   }
+
+  navigateTo(row: any) {
+    var url: string = row.url;
+    if(url != "") {
+      window.location.href = url;
+    }
+  }
 }

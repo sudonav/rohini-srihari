@@ -5,4 +5,5 @@ export interface Talks {
     title: string;
     event: string;
     location: string;
+    url: string;
 } 

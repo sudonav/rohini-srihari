@@ -4,9 +4,9 @@
       <h2>Teaching</h2>
       <hr>
       <div class="class-list-form ">
-          <button mat-raised-button class="add" [routerLink]="['/teaching-add']">
+          <!-- <button mat-raised-button class="add" [routerLink]="['/teaching-add']">
             <mat-icon aria-label="Add button" svgIcon="add"></mat-icon>
-          </button>
+          </button> -->
         </div>
       <table mat-table [dataSource]="classDataSource" multiTemplateDataRows class="class-table mat-elevation-z8" >
         <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
@@ -20,16 +20,18 @@
                 <div class="info-label">General Information:</div>
                 <div class="class-element-location">{{class.location}} | {{class.time}}</div><br>
                 <div class="info-label">Office Hours:</div>
-                <div class="class-element-office-hours">{{class.office_hours}}</div>
+                <div class="class-element-office-hours">{{class.office_hours}}</div><br>
+                <div class="info-label">Semesters:</div>
+                <div class="class-element-semester">{{class.semester}}</div>
               </div>
               <div class="class-element-description">
                 {{class.description}}
               </div>
-              <div>
+              <!-- <div>
                   <button mat-raised-button class="view" [routerLink]="['/teaching-detail',class.id]">
                     <mat-icon aria-label="View button" svgIcon="view"></mat-icon>
                   </button>
-                </div>
+              </div> -->
             </div>
           </td>
         </ng-container>

@@ -8,15 +8,23 @@
       <mat-card-header>
         <mat-card-title class="teaching-title">{{teaching.title}}</mat-card-title>
         <mat-card-subtitle>{{teaching.description}}</mat-card-subtitle>
+        
       </mat-card-header>
-      <mat-card-actions>
+      <mat-card-content class="teaching-content">
+        <div>
+          <p>Location: {{teaching.location}}</p>
+          <p>Time: {{teaching.time}}</p>
+          <p>Office Hours: {{teaching.office_hours}}</p>
+        </div>
+      </mat-card-content>
+      <!-- <mat-card-actions>
         <button mat-raised-button class="edit" [routerLink]="['/teaching-edit/', teaching.id]">
           <mat-icon aria-label="Edit button" svgIcon="edit"></mat-icon>
         </button>
         <button mat-raised-button class="delete" (click)="openConfirmationDialog()">
           <mat-icon aria-label="Delete button" svgIcon="delete"></mat-icon>
         </button>
-      </mat-card-actions>
+      </mat-card-actions> -->
     </mat-card>
 </div>
 </div>
