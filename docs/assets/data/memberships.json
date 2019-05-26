@@ -1,0 +1,22 @@
+{
+"membership": [
+    {
+      "title": "Member, Board of Directors",
+      "event": "Amherst Chamber of Commerce",
+      "location": "Amherst, NY",
+      "year": "2010",
+      "talk_date": "2010",
+      "id": 1,
+	  "url":"http://www.amherst.org/content/pages/meet-the-board-of-directors"
+    },
+	{
+      "title": "Organizing Committee (Multimedia Information Extraction)",
+      "event": "AAAI Fall Symposium",
+      "location": "Arlington, VA",
+      "year": "2008",
+      "talk_date": "November 2008",
+      "id": 2,
+	  "url":"http://www.aaai.org/Symposia/Fall/fss08symposia.php#fs06"
+    }
+	]
+}
