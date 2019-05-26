@@ -43,7 +43,8 @@ import {
   MatSelectModule, 
   MatDialogModule,
   MatRadioModule,
-  MatTabsModule} from "@angular/material";
+  MatTabsModule
+} from "@angular/material";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 import { LoginComponent } from './auth/login/login.component';

@@ -19,12 +19,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-  },
-  {
+  },{
     path: 'login',
     component: LoginComponent
-  },
-  {
+  },{
     path: 'research',
     component: ResearchComponent
   },{
@@ -60,8 +58,10 @@ const routes: Routes = [
   },{
     path: 'teaching-detail/:id',
     component:TeachingDetailComponent
-  },
-  { path: '**', component: HomeComponent }
+  },{
+    path: '**', 
+    component: HomeComponent
+  }
 ];
 
 @NgModule({
