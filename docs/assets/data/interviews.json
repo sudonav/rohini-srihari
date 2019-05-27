@@ -1,0 +1,22 @@
+{
+"interview": [
+    {
+      "title": "Radio Interview with Dan Misener on 'Computational Psycholinguistics'",
+      "event": "Canadian Broadcasting Corporation",
+      "location": "Canada",
+      "year": "2015",
+      "talk_date": "July 21, 2015",
+      "id": 1,
+	  "url":"https://soundcloud.com/cbcyukon/dan-misener-tone-analyzer"
+    },
+	{
+      "title": "FINISH LINE: Tech startups do thrive in Buffalo",
+      "event": "Buffalo Business First",
+      "location": "Buffalo, NY",
+      "year": "2015",
+      "talk_date": "January 16, 2015",
+      "id": 1,
+	  "url":"http://www.cedar.buffalo.edu/pub_docs/BUF-Business1-011615.pdf"
+    }
+	]
+}
